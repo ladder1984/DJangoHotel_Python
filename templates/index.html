@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}首页 {% endblock %}
+{% block wraptype %}
+    <div class="wrap">
+{% endblock %}
+{% block content %}
+    {% load staticfiles %}
+            <div class="banner">
+                <ul>
+                    <li>
+                        <img src="{% static "pic/key_home_1.jpg" %} ">
+                    </li>
+                    <li>
+                        <img src="{% static "pic/key_home_2.jpg" %} ">
+                    </li>
+                    <li>
+                        <img src="{% static "pic/key_home_3.jpg" %} ">
+                    </li>
+                </ul>
+
+                <div class="order"><a href="/order"><h2>预订</h2></a></div>
+            </div>
+            <script>
+
+            $(function() {
+                $('.banner').unslider({
+                    speed: 500,
+                    //  The speed to animate each slide (in milliseconds)
+                    delay: 3000,
+                    //  The delay between slide animations (in milliseconds)
+                    complete: function() {},
+                    //  A function that gets called after every slide animation
+                    keys: true,
+                    //  Enable keyboard (left, right) arrow shortcuts
+                    dots: true,
+                    //  Display dot navigation
+                    fluid: false //  Support responsive design. May break non-responsive designs
+
+                });
+            });
+        </script>
+
+            <div class="panel panel-default" id="hotelDescription">
+                <div class="panel-heading">
+                    <h3>酒店介绍</h3>
+                </div>
+                <div class="panel-body">
+                   {{ description }}
+                </div>
+            </div>
+{% endblock %}

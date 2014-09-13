@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}酒店介绍{% endblock %}
+{% block wraptype %}
+    <div class="wrap about">
+{% endblock %}
+{% block content %}
+            <div class="banner">
+                <ul>
+                    <li>
+                        {% load staticfiles %}
+                        <img src="{% static "pic/key_overview_1.jpg" %}" alt="Grunt">
+                    </li>
+                </ul>
+
+                <div id="hotelDescription">
+                    <h2>酒店介绍:DJango Hotel</h2>
+                    <p>
+                        {{ description }}
+                    </p>
+                </div>
+            </div>
+{% endblock %}

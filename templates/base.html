@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    {% block insert %}
+        {% load staticfiles %}
+
+        <link rel="stylesheet" href="{% static "css/bootstrap.css" %}" >
+        <link rel="stylesheet" href="{% static "css/responsive-nav.css" %}">
+        <link rel="stylesheet" href="{% static "css/styles.css" %}">
+
+        <script src="{% static "js/jquery-2.1.1.js" %}"></script>
+        <script src="{% static "js/bootstrap.min.js" %}"></script>
+        <script src="{% static "js/responsive-nav.js" %}"></script>
+        <script src="{% static "js/unslider.js" %}"></script>
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+        <div class="container-fluid">
+
+        {% block wraptype %}
+
+        {% endblock %}
+        <div id="header">
+                <div class="hotel-logo">
+                    <a href="/" class="">
+                        <img src="{% static "pic/hotel-logo.png" %}" alt="武汉新世界酒店">
+                    </a>
+                </div>
+                <div id="navbar">
+                    <ul>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/order">客房预定</a></li>
+                        <li><a href="/roominfo">客房信息</a></li>
+                        <li><a href="/about">关于酒店</a></li>
+                    </ul>
+                </div>
+            </div>
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+
+            <div id="footer">
+                <div class="panel panel-default" id="hoteldescription">
+                    <div class="panel-body">
+                        +86 27 8380 8888
+                        </br>
+                        中国湖北武汉市汉口区解放大道 630号，邮编 430030
+                        </br>
+                        @All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+            var navigation = responsiveNav("#navbar", {
+                animate: true,
+                // Boolean: 是否启动CSS过渡效果（transitions）， true 或 false
+                transition: 400,
+                // Integer: 过渡效果的执行速度，以毫秒（millisecond）为单位
+                label: "Menu",
+                // String: Label for the navigation toggle
+                insert: "after",
+                // String: Insert the toggle before or after the navigation
+                customToggle: "",
+                // Selector: Specify the ID of a custom toggle
+                openPos: "relative",
+                // String: Position of the opened nav, relative or static
+                jsClass: "js",
+                // String: 'JS enabled' class which is added to <html> el
+                debug: false,
+                // Boolean: Log debug messages to console, true 或 false
+                init: function() {},
+                // Function: Init callback
+                open: function() {},
+                // Function: Open callback
+                close: function() {} // Function: Close callback
+            });
+
+        </script>
+    {% endblock %}
+
+</body>
+</html>

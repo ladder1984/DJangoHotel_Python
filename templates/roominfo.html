@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}房型介绍{% endblock %}
+{% block wraptype %}
+    <div class="wrap room">
+{% endblock %}
+{% block content %}
+                <div class="banner">
+                <ul>
+                    <li>
+                        {% load staticfiles %}
+                        <img src="{% static "pic/key_home_1.jpg" %} ">
+                    </li>
+                </ul>
+
+                <div class="order"><a href="/order"><h2>预订</h2></a></div>
+            </div>
+
+
+ <div id="hotelDescription">
+    {% for roomInfo in roomInfoList %}
+
+                 <article>
+
+                    <h3>{{roomInfo.name}}</h3>
+                    <p>
+                        {{roomInfo.description}}
+
+                    </p>
+                    <p>
+                        价格：{{ roomInfo.price }}每日
+                    </p>
+                 </article>
+    {% endfor %}
+  </div>
+
+{% endblock %}

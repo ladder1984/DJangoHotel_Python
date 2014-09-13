@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+    <head>
+
+
+       <title>酒店预订系统Demo</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% load staticfiles %}
+        <script src="{% static "js/blog.js" %}"></script>
+        <link rel="stylesheet" href="{% static "css/bootstrap.css" %}" >
+        <link rel="stylesheet" href="{% static "css/responsive-nav.css" %}">
+        <link rel="stylesheet" href="{% static "css/styles.css" %}">
+
+        <script src="{% static "js/jquery-2.1.1.js" %}"></script>
+        <script src="{% static "js/bootstrap.min.js" %}"></script>
+        <script src="{% static "js/responsive-nav.js" %}"></script>
+        <script src="{% static "js/unslider.js" %}"></script>
+
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+        <div class="wrap about">
+            <div id="header">
+                <div class="hotel-logo">
+                    <a href="/" class="">
+                        <img src="{% static "pic/hotel-logo.png" %}" alt="武汉新世界酒店">
+                    </a>
+                </div>
+                <div id="navbar">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">客房预定</a></li>
+                        <li><a href="#">客房信息</a></li>
+                        <li><a href="#">关于酒店</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="banner">
+                <ul>
+                    <li>
+                        <img src="{% static "pic/key_overview_1.jpg" %}" alt="Grunt">
+                    </li>
+                </ul>
+
+                <div id="hotelDescription">
+                    <h2>酒店介绍:DJango Hotel</h2>
+                    <p>
+                        DJango Hotel位于湖北省府的汉口商业区之黄金地段，拥有327间客房和套房，各项设施和服务一应俱全，是五星级豪华酒店的出色典范。酒店设有健身中心和户外游泳池，配备完善的商务设施，餐厅和酒廊奉献中式和国际风味美馔及上等佳酿。 酒店周围遍布全球各大企业的区域总部，从酒店前往武汉天河国际机场仅需45分钟车程，前往汉口火车站仅需15分钟车程。酒店毗邻武汉国际广场，信步可达武汉国际会展中心。DJango Hotel是新世界中心综合发展的重要组成部分，新世界中心还包括５Ａ级写字楼、新世界百货商场、K11美食广场和豪华服务式公寓。 DJango Hotel是湖北省唯一一家荣膺“2013年第二届中国酒店金星奖”殊荣的五星级酒店，该奖项由国家旅游局和中国酒店协会共同授予，被公认为中国酒店行业的“奥斯卡”大奖。
+                    酒店地址:湖北省武汉市洪山区南李路22号
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="footer">
+                <script type="text/javascript">
+                    kfguin = "972122220";
+                    eid = "";
+                    ws = "www.baidu.com";
+                    companyname = "八天酒店";
+                    welcomeword = "欢迎光临八天酒店";
+                    type = "1";
+                    wpadomain = "bizapp";
+                </script>
+                <script type="text/javascript" src="js/kf.js">
+                </script>
+                <div class="panel panel-default" id="hoteldescription">
+                    <div class="panel-body">
+                        +86 27 8380 8888
+                        </br>
+                        中国湖北武汉市汉口区解放大道 630号，邮编 430030
+                        </br>
+                        @All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+            var navigation = responsiveNav("#navbar", {
+                animate: true,
+                // Boolean: 是否启动CSS过渡效果（transitions）， true 或 false
+                transition: 400,
+                // Integer: 过渡效果的执行速度，以毫秒（millisecond）为单位
+                label: "Menu",
+                // String: Label for the navigation toggle
+                insert: "after",
+                // String: Insert the toggle before or after the navigation
+                customToggle: "",
+                // Selector: Specify the ID of a custom toggle
+                openPos: "relative",
+                // String: Position of the opened nav, relative or static
+                jsClass: "js",
+                // String: 'JS enabled' class which is added to <html> el
+                debug: false,
+                // Boolean: Log debug messages to console, true 或 false
+                init: function() {},
+                // Function: Init callback
+                open: function() {},
+                // Function: Open callback
+                close: function() {} // Function: Close callback
+            });
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}预定客房{% endblock %}
+{% block wraptype %}
+    <div class="wrap order about">
+{% endblock %}
+{% block content %}
+
+
+            <div class="banner">
+                <ul>
+                    <li>
+                        {% load staticfiles %}
+                        <img src="{%  static "pic/6240454_091935658000_2.jpg" %}" >
+                    </li>
+                </ul>
+
+                <div id="hotelDescription">
+                    <h2>预订</h2>
+                    <p>
+                        <form action="/orderresult" method="get">
+                            <input type="text" name="name" placeholder="请输入你的名字">
+                            <input type="text" name="tel" placeholder="请输入你的电话号码">
+                            <input type="text" name="cardid" placeholder="请输入你的身份证号">
+                              房型： <select name="roomtype">
+                                <option value="standard">标准间</option>
+                                <option value="better">豪华间</option>
+                                <option value="president">总统间</option>
+                            </select>
+                            <input type="text" name="begin"  placeholder="开始日期，形如2014-09-15">
+                            <input type="text" name="end"  placeholder="截止日期，形如2014-09-15">
+                            <input type="submit" value="提交">
+                        </form>
+                    </p>
+                </div>
+            </div>
+
+{% endblock %}
