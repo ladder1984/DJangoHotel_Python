@@ -46,7 +46,6 @@ class Order(models.Model):
     totalprice = models.IntegerField()
     state=models.CharField(max_length=45,choices=ORDER_STATE_CHOICES)
 
-class TestModel(models.Model):
-    name =  models.CharField(max_length=45)
+
 
 

@@ -9,7 +9,6 @@ from DJangoHotel.viewspackage.orderView import order
 from DJangoHotel.viewspackage.roomInfoView import roomInfo
 from django.conf import settings
 from django.conf.urls.static import static
-from DJangoHotel.viewspackage.testView import test
 
 urlpatterns = [
     # Examples:
@@ -21,7 +20,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^about/', about),
     url(r'^roominfo/', roomInfo),
-    url(r'^test/', test),
     url(r'^$', index),
     url(r'^order/',order),
     url(r'^orderresult/',orderResult)
