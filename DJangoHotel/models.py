@@ -34,6 +34,9 @@ class RoomInfo(models.Model):
     total = models.IntegerField(null=True,blank=True)
     description = models.TextField()
 
+    def __unicode__(self):
+        return self.name
+
 
 class Order(models.Model):
     #id
