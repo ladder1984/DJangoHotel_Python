@@ -13,6 +13,9 @@ Django:1.7
 
 MySQL:5.6.20
 
+------
+
+**Demo:** <http://djangohotel.ga/>
 
 #注意事项
 1. 确保已安装python-mysql
